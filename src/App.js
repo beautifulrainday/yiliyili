@@ -1,25 +1,88 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout, Space } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
+const headerStyle = {
+  textAlign: 'center',
+  color: '#fff',
+  height: 64,
+  paddingInline: 50,
+  lineHeight: '64px',
+  backgroundColor: '#7dbcea',
+};
+const contentStyle = {
+  textAlign: 'center',
+  minHeight: 120,
+  lineHeight: '120px',
+  color: '#fff',
+  backgroundColor: '#108ee9',
+};
+const siderStyle = {
+  textAlign: 'center',
+  lineHeight: '120px',
+  color: '#fff',
+  backgroundColor: '#3ba0e9',
+};
+const footerStyle = {
+  textAlign: 'center',
+  color: '#fff',
+  backgroundColor: '#7dbcea',
+};
+const App = () => (
+  <Space
+    direction="vertical"
+    style={{
+      width: '100%',
+    }}
+    size={[0, 48]}
+  >
+    <Layout>
+      <Header style={headerStyle}>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+        <span>首页</span>&nbsp;&nbsp;
+        <span>番剧</span>&nbsp;&nbsp;
+        <span>直播</span>&nbsp;&nbsp;
+        <span>游戏中心</span>
 
+      </Header>
+      <Content style={contentStyle}>Content</Content>
+      <Footer style={footerStyle}>Footer</Footer>
+    </Layout>
+    {/* <Layout>
+      <Header style={headerStyle}>Header</Header>
+      <Layout hasSider>
+        <Sider style={siderStyle}>Sider</Sider>
+        <Content style={contentStyle}>Content</Content>
+      </Layout>
+      <Footer style={footerStyle}>Footer</Footer>
+    </Layout>
+    <Layout>
+      <Header style={headerStyle}>Header</Header>
+      <Layout hasSider>
+        <Content style={contentStyle}>Content</Content>
+        <Sider style={siderStyle}>Sider</Sider>
+      </Layout>
+      <Footer style={footerStyle}>Footer</Footer>
+    </Layout>
+    <Layout>
+      <Sider style={siderStyle}>Sider</Sider>
+      <Layout>
+        <Header style={headerStyle}>Header</Header>
+        <Content style={contentStyle}>Content</Content>
+        <Footer style={footerStyle}>Footer</Footer>
+      </Layout>
+    </Layout> */}
+  </Space>
+);
 export default App;
+
+
+// import React from 'react';
+// import { Button } from 'antd';
+
+// const App: React.FC = () => (
+//   <div className="App">
+//     <Button type="primary">Button</Button>
+//   </div>
+// );
+
+// export default App;
